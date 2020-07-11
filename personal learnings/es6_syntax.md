@@ -234,7 +234,6 @@ Maps
 ```
 Maps are to objects
 Sets are to arrays
-
 ```
 
 To create a Map you use the new keyword just like you do with sets 
@@ -273,8 +272,6 @@ If you `.set()` a key-value pair to a Map that already uses the same key, you 
 
 The `.delete()` method returns `true` if a key-value pair is successfully deleted from the `Map` object, and `false` if unsuccessful. The return value of `.set()` is the `Map` object itself if successful.
 
-
-
 Looping through Maps;
 
 You can loop through a set in 3 different ways; 
@@ -282,32 +279,45 @@ You can loop through a set in 3 different ways;
 1. Step through each key or value using the Map’s default iterator
    
        Using both the `.keys()` and the `.values() `helps you create a newiterator object called `MapIterator` You can store that iterator object in a new variable and use `.next()` to loop through  each key-value.
-   
-   
-   
-   ```js
-   
+
+```js
    let iteratorObjForKeys = animals.keys();
    iteratorObjForKeys.next();
-   
-   
+
+
    ///output///
-   
+
    object {value 'dog', done false}
-   ```
-   
+```
+
    So you use the `.next()` to get the next value. And so on..
-   
-   
-   
+
    On the other side use the `.vlaues` to access the   Map values , its the same process like for th `.keys()`
-   
-   
+
 2. Loop through each key-value pair using the new `for...of` loop
 3. Loop through each key-value pair using the Map’s `.forEach()` method
 
-            example
+   Example
 
 ```js
 animals.forEach((value, key)) => console.log(key, value);
 ```
+
+Generators;
+
+When a functoion is invoked the javascript function willl run everyline of code from  top to bottom. It doesnot stop untill the excution is done.This run time is called `run-to-completion`. Example
+
+```js
+function getEmployee(){
+    console.log('the function has state');
+const names = ['Amanda', 'Diego', 'Farrin']
+for (const name of names){
+    console.log(name);
+}
+console.log('the function has ended');
+}
+getEmployee();
+```
+
+Complier  is  acomputer program that changes source code into machince code, Running code through a complier changes its level of Abstraction. Transpling is also a grogram that runs to take your source of code into a target code, Just like a complier howvr jehere the source code and the target code are at the same level of Abstraction.
+NB. the Babelrc file holds which presets {Preset are a number of plugins that are buldled togther } to be used and the  package.json file list all the dependenices that are to be installed.
